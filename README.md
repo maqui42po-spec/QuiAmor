@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para o Meu Amor ❤️</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff0f3;
+            color: #5c001e;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        h1 { color: #ff4d6d; font-size: 2.5em; }
+        p { font-size: 1.2em; line-height: 1.6; }
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .foto {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 4px solid #ffb3c1;
+            transition: transform 0.3s;
+        }
+        .foto:hover { transform: scale(1.05); }
+        .footer { margin-top: 50px; font-style: italic; color: #ff758f; }
+        .heart { color: #ff4d6d; font-size: 1.5em; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Para a pessoa mais especial do mundo ❤️</h1>
+        
+        <p>Criei este cantinho para te lembrar o quanto você é importante para mim. 
+           Cada momento ao seu lado é um presente que eu guardo com todo carinho.</p>
+
+        <div class="galeria">
+            <img src="foto1.jpg" alt="Nosso momento" class="foto">
+            <img src="foto2.jpg" alt="Outro momento lindo" class="foto">
+            <img src="foto3.jpg" alt="Te amo" class="foto">
+        </div>
+
+        <p style="margin-top: 30px;">
+            "Você é a minha melhor escolha, todos os dias."
+        </p>
+
+        <div class="footer">
+            Com todo o meu amor, <br>
+            <strong>[Seu Nome]</strong> <br>
+            <span class="heart">❤❤❤</span>
+        </div>
+    </div>
+
+</body>
+</html>
