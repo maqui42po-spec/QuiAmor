@@ -1,37 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qui Amor</title>
+    <title>Para a pessoa da minha vida ❤️</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f2f2f2; }
+        h1 { color: #c71585; }
+        #contador { font-size: 2em; color: #ff4500; }
+        .galeria { display: flex; justify-content: center; margin-top: 20px; }
+        .galeria img { margin: 10px; max-width: 200px; border-radius: 10px; }
+        footer { margin-top: 30px; font-size: 1.2em; color: #555; }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Qui Amor</h1>
-    <button onclick="displayMessage()">Click Me for a Special Message</button>
-    <div id="message" style="display:none;">
-        <p>Your love is the music of my heart!</p>
+    <h1>Para a pessoa da minha vida ❤️</h1>
+    <div id="contador">
+        Contador de dias: <span id="dias">0</span>
     </div>
-    <audio controls autoplay hidden>
-        <source src="path_to_your_music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <h2>Romantic Messages</h2>
-    <ul>
-        <li>You make my world brighter!</li>
-        <li>I cherish every moment with you!</li>
-        <li>Your smile is my sunshine!</li>
-    </ul>
-    <h2>Things I Love About You</h2>
-    <ul>
-        <li>Your kindness</li>
-        <li>Your sense of humor</li>
-        <li>Your intelligence</li>
-        <li>Your passion for life</li>
-    </ul>
-    <script type="text/javascript">
-        function displayMessage() {
-            document.getElementById('message').style.display = 'block';
-        }
+    <div class="galeria">
+        <img src="foto.png" alt="Foto 1">
+        <img src="foto2.png" alt="Foto 2">
+        <img src="foto3.jpg" alt="Foto 3">
+    </div>
+    <p>Vida, você é o meu sol. Cada dia que passa, meu amor por você só cresce.</p>
+    <footer>
+        Com todo o meu amor, Marcos ❤
+    </footer>
+    <script>
+        const date1 = new Date('2022-03-08'); // Data inicial
+        const date2 = new Date(); // Data atual
+        const timeDiff = Math.abs(date2 - date1);
+        const diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+        document.getElementById('dias').innerText = diffDays;
     </script>
 </body>
 </html>
