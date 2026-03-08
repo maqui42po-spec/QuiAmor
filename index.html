@@ -38,7 +38,7 @@
         .galeria {
             display: flex;
             flex-direction: column;
-            gap: 30px; /* Aumentado para dar espaço entre os blocos */
+            gap: 20px;
             margin-top: 30px;
         }
         .foto {
@@ -46,14 +46,6 @@
             border-radius: 20px;
             border: 5px solid #fff;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        /* Estilo para as mensagens das fotos */
-        .legenda-foto {
-            margin-top: 10px;
-            font-size: 1.1em;
-            color: #800e13;
-            font-style: italic;
-            line-height: 1.4;
         }
         .btn-mensagem {
             background-color: #ff4d6d;
@@ -67,4 +59,65 @@
             margin-top: 20px;
             box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
         }
-        .heart { color: #ff4d6d; font-size: 1.8em; animation: pulse 1.5s infinite; display: inline-block
+        .heart { color: #ff4d6d; font-size: 1.8em; animation: pulse 1.5s infinite; display: inline-block; }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="minhaMusica" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <h1>Para a pessoa da minha vida ❤️</h1>
+
+        <div class="contador-box">
+            <span>Estamos juntos há:</span>
+            <span class="dias-numero" id="dias">...</span>
+            <span>dias!</span>
+        </div>
+
+        <div class="galeria">
+            <img src="foto.png" class="foto">
+            <p>"Eu te amei, e te amarei por todos seus dias, e amo cada segundo"</p>
+            
+            <img src="foto2.png" class="foto">
+            <p>Feliz Dia Internacional da Mulher, meu amor. Você é a mulher mais incrível que eu conheço. ❤️</p>
+            
+            <img src="foto3.jpg" class="foto">
+            <p>No Dia Internacional da Mulher, só queria dizer que tenho muita sorte de ter você comigo. 🌹</p>
+        </div>
+
+        <button class="btn-mensagem" onclick="surpresa()">Clique aqui, meu amor ❤️</button>
+
+        <div style="margin-top: 50px; font-style: italic; color: #ff758f;">
+            Com todo o meu amor, <br>
+            <strong>Marcos</strong> <br>
+            <span class="heart">❤</span>
+        </div>
+    </div>
+
+    <script>
+        // Data para 521 dias
+        const dataInicio = new Date(2024, 9, 2); 
+        const hoje = new Date();
+        const diff = Math.abs(hoje - dataInicio);
+        const totalDias = Math.floor(diff / (1000 * 60 * 60 * 24));
+        document.getElementById("dias").innerHTML = totalDias;
+
+        function surpresa() {
+            // Toca a música
+            var audio = document.getElementById("minhaMusica");
+            audio.play();
+
+            // Mostra a frase
+            alert("Se tua vida depender do meu amor, viverás além da vida, pois te amo além do amor");
+        }
+    </script>
+</body>
+</html>
