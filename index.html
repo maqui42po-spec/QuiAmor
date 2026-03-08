@@ -57,3 +57,48 @@
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Para a pessoa da minha vida ❤️</h1>
+        
+        <p>Marquei este cantinho no mundo para te lembrar o quanto você é importante para mim. 
+           Cada momento ao seu lado é um presente que eu guardo com todo carinho.</p>
+
+        <div class="contador-box">
+            <span>Estamos construindo nossa história há:</span>
+            <span class="dias-numero" id="dias">...</span>
+            <span>dias incríveis!</span>
+        </div>
+
+        <div class="galeria">
+            <img src="foto.png" alt="Nosso momento" class="foto">
+            <img src="foto2.png" alt="Outro melhor ainda" class="foto">
+            <img src="foto3.jpg" alt="Te amo" class="foto">
+        </div>
+
+        <p style="margin-top: 40px; font-weight: bold; font-style: italic;">
+            "Você é a minha melhor escolha, todos os dias."
+        </p>
+
+        <div class="footer">
+            Com todo o meu amor, <br>
+            <strong>Marcos</strong> <br>
+            <span class="heart">❤</span>
+        </div>
+    </div>
+
+    <script>
+        const dataInicio = new Date(2024, 9, 3);
+        const hoje = new Date();
+        const diffEmMilissegundos = Math.abs(hoje - dataInicio);
+        const totalDias = Math.floor(diffEmMilissegundos / (1000 * 60 * 60 * 24));
+        document.getElementById("dias").innerHTML = totalDias;
+    </script>
+
+</body>
+</html>
