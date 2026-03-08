@@ -51,6 +51,24 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
+        .btn-mensagem {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .btn-mensagem:hover {
+            background-color: #ff758f;
+            transform: scale(1.05);
+        }
+
         .footer { margin-top: 50px; font-style: italic; color: #ff758f; }
         .heart { color: #ff4d6d; font-size: 1.8em; animation: pulse 1.5s infinite; display: inline-block; }
         
@@ -62,6 +80,10 @@
     </style>
 </head>
 <body>
+
+    <audio id="musicaFundo" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
 
     <div class="container">
         <h1>Para a pessoa da minha vida ❤️</h1>
@@ -85,6 +107,8 @@
             "Você é a minha melhor escolha, todos os dias."
         </p>
 
+        <button class="btn-mensagem" onclick="ativarTudo()">Clique aqui, meu amor ❤️</button>
+
         <div class="footer">
             Com todo o meu amor, <br>
             <strong>Marcos</strong> <br>
@@ -93,11 +117,21 @@
     </div>
 
     <script>
-        const dataInicio = new Date(2024, 9, 3);
+        // Data ajustada para 02 de Outubro de 2024 (Mês 9 no JS)
+        const dataInicio = new Date(2024, 9, 2); 
         const hoje = new Date();
         const diffEmMilissegundos = Math.abs(hoje - dataInicio);
         const totalDias = Math.floor(diffEmMilissegundos / (1000 * 60 * 60 * 24));
         document.getElementById("dias").innerHTML = totalDias;
+
+        function ativarTudo() {
+            // Tenta tocar a música (se o arquivo musica.mp3 existir)
+            const audio = document.getElementById("musicaFundo");
+            audio.play().catch(e => console.log("Aguardando arquivo de música..."));
+            
+            // Exibe a sua frase especial
+            alert("Se tua vida depender do meu amor, viverás além da vida, pois te amo além do amor");
+        }
     </script>
 
 </body>
