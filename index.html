@@ -6,7 +6,7 @@
     <title>Para o Meu Amor ❤️</title>
     <style>
         body {
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #fff0f3;
             color: #5c001e;
             text-align: center;
@@ -21,7 +21,9 @@
             border-radius: 30px;
             box-shadow: 0 10px 30px rgba(255, 77, 109, 0.2);
         }
-        h1 { color: #ff4d6d; font-size: 2.2em; }
+        h1 { color: #ff4d6d; font-size: 2.2em; margin-bottom: 10px; }
+        p { font-size: 1.1em; line-height: 1.6; color: #800e13; }
+        
         .contador-box {
             background-color: #ffeff2;
             padding: 15px;
@@ -30,15 +32,17 @@
             border: 1px dashed #ff4d6d;
         }
         .dias-numero {
-            font-size: 2.5em;
+            font-size: 2em;
             font-weight: bold;
             color: #ff4d6d;
             display: block;
         }
+
         .galeria {
             display: flex;
             flex-direction: column;
             gap: 20px;
+            margin-top: 30px;
         }
         .foto {
             width: 100%;
@@ -46,7 +50,10 @@
             border: 5px solid #fff;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
+
+        .footer { margin-top: 50px; font-style: italic; color: #ff758f; }
         .heart { color: #ff4d6d; font-size: 1.8em; animation: pulse 1.5s infinite; display: inline-block; }
+        
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.2); }
@@ -55,31 +62,43 @@
     </style>
 </head>
 <body>
+
     <div class="container">
         <h1>Para a pessoa da minha vida ❤️</h1>
-        <p>Cada momento ao seu lado é um presente que eu guardo com todo carinho.</p>
+        
+        <p>Marquei este cantinho no mundo para te lembrar o quanto você é importante para mim. 
+           Cada momento ao seu lado é um presente que eu guardo com todo carinho.</p>
+
         <div class="contador-box">
-            <span>Estamos juntos há:</span>
+            <span>Estamos construindo nossa história há:</span>
             <span class="dias-numero" id="dias">...</span>
             <span>dias incríveis!</span>
         </div>
+
         <div class="galeria">
-            <img src="foto.png" class="foto">
-            <img src="foto2.png" class="foto">
-            <img src="foto3.jpg" class="foto">
+            <img src="foto.png" alt="Nosso momento" class="foto">
+            <img src="foto2.png" alt="Outro melhor ainda" class="foto">
+            <img src="foto3.jpg" alt="Te amo" class="foto">
         </div>
-        <p><strong>"Você é a minha melhor escolha."</strong></p>
-        <div style="margin-top: 30px;">
-            Com todo amor, <br> <strong>Marcos</strong> <br>
+
+        <p style="margin-top: 40px; font-weight: bold; font-style: italic;">
+            "Você é a minha melhor escolha, todos os dias."
+        </p>
+
+        <div class="footer">
+            Com todo o meu amor, <br>
+            <strong>Marcos</strong> <br>
             <span class="heart">❤</span>
         </div>
     </div>
+
     <script>
         const dataInicio = new Date(2024, 10, 3);
         const hoje = new Date();
-        const diff = Math.abs(hoje - dataInicio);
-        const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
-        document.getElementById("dias").innerHTML = dias;
+        const diffEmMilissegundos = Math.abs(hoje - dataInicio);
+        const totalDias = Math.floor(diffEmMilissegundos / (1000 * 60 * 60 * 24));
+        document.getElementById("dias").innerHTML = totalDias;
     </script>
+
 </body>
 </html>
