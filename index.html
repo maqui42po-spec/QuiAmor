@@ -46,14 +46,10 @@
         }
         .foto {
             width: 100%;
-            max-height: 450px;
-            object-fit: cover;
             border-radius: 20px;
             border: 5px solid #fff;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
         }
-        .foto:hover { transform: scale(1.02); }
 
         .footer { margin-top: 50px; font-style: italic; color: #ff758f; }
         .heart { color: #ff4d6d; font-size: 1.8em; animation: pulse 1.5s infinite; display: inline-block; }
@@ -81,9 +77,8 @@
 
         <div class="galeria">
             <img src="foto.png" alt="Nosso momento" class="foto">
-<img src="foto2.png" alt="Outro melhor ainda" class="foto">
-<img src="foto3.jpg" alt="Te amo" class="foto">
-            
+            <img src="foto2.png" alt="Outro melhor ainda" class="foto">
+            <img src="foto3.jpg" alt="Te amo" class="foto">
         </div>
 
         <p style="margin-top: 40px; font-weight: bold; font-style: italic;">
@@ -100,10 +95,8 @@
     <script>
         const dataInicio = new Date(2024, 10, 3);
         const hoje = new Date();
-        
         const diffEmMilissegundos = Math.abs(hoje - dataInicio);
         const totalDias = Math.floor(diffEmMilissegundos / (1000 * 60 * 60 * 24));
-        
         document.getElementById("dias").innerHTML = totalDias;
     </script>
 
