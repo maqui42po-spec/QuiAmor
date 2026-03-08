@@ -1,38 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para a pessoa da minha vida ❤️</title>
+    <title>Para o Meu Amor ❤️</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; background-color: #f2f2f2; }
-        h1 { color: #c71585; }
-        #contador { font-size: 2em; color: #ff4500; }
-        .galeria { display: flex; justify-content: center; margin-top: 20px; }
-        .galeria img { margin: 10px; max-width: 200px; border-radius: 10px; }
-        footer { margin-top: 30px; font-size: 1.2em; color: #555; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fff0f3;
+            color: #5c001e;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 20px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(255, 77, 109, 0.2);
+        }
+        h1 { color: #ff4d6d; font-size: 2.2em; }
+        .contador-box {
+            background-color: #ffeff2;
+            padding: 15px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 1px dashed #ff4d6d;
+        }
+        .dias-numero {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ff4d6d;
+            display: block;
+        }
+        .galeria {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .foto {
+            width: 100%;
+            border-radius: 20px;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .heart { color: #ff4d6d; font-size: 1.8em; animation: pulse 1.5s infinite; display: inline-block; }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
     </style>
 </head>
 <body>
-    <h1>Para a pessoa da minha vida ❤️</h1>
-    <div id="contador">
-        Contador de dias: <span id="dias">0</span>
+    <div class="container">
+        <h1>Para a pessoa da minha vida ❤️</h1>
+        <p>Cada momento ao seu lado é um presente que eu guardo com todo carinho.</p>
+        <div class="contador-box">
+            <span>Estamos juntos há:</span>
+            <span class="dias-numero" id="dias">...</span>
+            <span>dias incríveis!</span>
+        </div>
+        <div class="galeria">
+            <img src="foto.png" class="foto">
+            <img src="foto2.png" class="foto">
+            <img src="foto3.jpg" class="foto">
+        </div>
+        <p><strong>"Você é a minha melhor escolha."</strong></p>
+        <div style="margin-top: 30px;">
+            Com todo amor, <br> <strong>Marcos</strong> <br>
+            <span class="heart">❤</span>
+        </div>
     </div>
-    <div class="galeria">
-        <img src="foto.png" alt="Foto 1">
-        <img src="foto2.png" alt="Foto 2">
-        <img src="foto3.jpg" alt="Foto 3">
-    </div>
-    <p>Vida, você é o meu sol. Cada dia que passa, meu amor por você só cresce.</p>
-    <footer>
-        Com todo o meu amor, Marcos ❤
-    </footer>
     <script>
-        const date1 = new Date('2022-03-08'); // Data inicial
-        const date2 = new Date(); // Data atual
-        const timeDiff = Math.abs(date2 - date1);
-        const diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
-        document.getElementById('dias').innerText = diffDays;
+        const dataInicio = new Date(2024, 10, 3);
+        const hoje = new Date();
+        const diff = Math.abs(hoje - dataInicio);
+        const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+        document.getElementById("dias").innerHTML = dias;
     </script>
 </body>
 </html>
